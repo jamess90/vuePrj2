@@ -61,7 +61,7 @@
                                                     max-width="600">
                                                 <v-img :aspect-ratio="16/9" :src="dummy" width="100%" height="240"
                                                        v-on:click="goRoomDetail(item.id)"
-                                                       style="filter: brightness(80%)">
+                                                       style="filter: brightness(90%)">
                                                     <span style="position: relative; bottom:0px;">
                                                         <h3 float="left"
                                                             style="color:white; text-align: left; margin: 10px 10px 10px 10px;">{{item.region}}</h3>
