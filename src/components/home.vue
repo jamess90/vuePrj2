@@ -238,6 +238,7 @@
         }),
         created() {
             this.roomList = this.response.data
+            this.$store.state.pageName = 'home'
         },
         computed: {
             numberOfPages() {

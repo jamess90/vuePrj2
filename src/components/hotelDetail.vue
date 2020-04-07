@@ -134,14 +134,20 @@
                 hotelImg3,
                 hotelImg4,
                 hotelImg5
-            ]
+            ],
+            params: {}
         }),
 
         created() {
+            this.$store.state.pageName = 'hotelDetail'
+            this.$store.state.hotelNum = this.$route.params.hotelNum
+
             setInterval(() => {
                 if (!this.autorun) return
                 if (++this.window >= this.length) this.window = 0
             }, 8000)
         },
+        methods: {
+        }
     }
 </script>

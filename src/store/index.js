@@ -5,6 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    pageName : 'home',
+    hotelNum : 0
   },
   mutations: {
   },
