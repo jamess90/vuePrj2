@@ -1,5 +1,5 @@
 <template>
-    <div>test</div>
+    <div>teste</div>
 </template>
 
 <script>
@@ -9,6 +9,5 @@
             this.$store.state.pageName = 'hotelReserve'
             this.$store.state.hotelNum = this.$route.params.hotelNum
         },
-
     }
 </script>

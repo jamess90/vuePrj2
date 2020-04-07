@@ -1,6 +1,6 @@
 <template>
     <section style="background-color: #ffffff">
-        <v-parallax dark src="https://staynmore.com/photo/intro/1577773643.jpg">
+        <v-parallax dark src="https://staynmore.com/photo/intro/1577773643.jpg" class="fade-enter-active-1">
             <v-row align="center" justify="center">
                 <v-col class="text-center" cols="12">
                     <h1 style="font-weight: inherit; font-size: 50px; text-align: center">
@@ -20,10 +20,10 @@
             </v-row>
         </v-parallax>
         <v-content
-                style="background-color: #ffffff; overflow: hidden; min-height: 1000px; max-width: 1300px; margin: 0 auto; padding: 5% 0; margin-top: -80px;">
+                   style="background-color: #ffffff; overflow: hidden; min-height: 1000px; max-width: 1300px; margin: 0 auto; padding: 5% 0; margin-top: -80px;">
             <div style="max-width: 1200px; overflow: hidden; margin: 0 auto; padding: 5% 0;">
                 <template>
-                    <v-container fluid id="reserve">
+                    <v-container fluid id="reserve" class="fade-enter-active-4">
                         <v-data-iterator :items="items" :items-per-page.sync="itemsPerPage" :page="page"
                                          :search="search" :sort-by="sortBy.toLowerCase()" :sort-desc="sortDesc"
                                          hide-default-footer dark>
@@ -126,6 +126,7 @@
 
     export default {
         data: () => ({
+            show: false,
             drawers: ['Default (no property)', 'Permanent', 'Temporary'],
             primaryDrawer: {
                 model: null,
@@ -171,7 +172,7 @@
             filter: {},
             sortDesc: false,
             page: 1,
-            itemsPerPage: 8,
+            itemsPerPage: 16,
             sortBy: 'name',
             keys: [
                 'Name',
@@ -264,3 +265,6 @@
         }
     }
 </script>
+<style>
+
+</style>

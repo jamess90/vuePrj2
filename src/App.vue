@@ -15,8 +15,10 @@
     import footer from './components/footer'
     import header from './components/header'
     import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+    import animation from './resources/css/animation.css'
 
     export default {
+        animation,
         components: {
             'footer-component': footer,
             'header-component': header

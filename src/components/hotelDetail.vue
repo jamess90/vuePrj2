@@ -18,7 +18,7 @@
         </section>
         <section>
             <v-content style="padding-top:30px;">
-                <section id="title"
+                <section id="title" class="fade-enter-active-4"
                          style=" padding-bottom:30px; text-align: center; overflow: hidden; max-height: 400px; max-width: 1400px; margin: 0 auto; line-height:20px;">
                     <h1 class="top">ABOUT</h1><br>
                     <h1 style="font-size: 40px;">-------------Naman Retreat-------------</h1><br>
@@ -34,7 +34,7 @@
                 </section>
 
                 <v-row id="galley_top">
-                    <v-col>
+                    <v-col class="fade-enter-active-1">
                         <v-hover v-slot:default="{ hover }">
                             <v-card style="float: right" class="mx-auto" max-width="500" :elevation="hover ? 16 : 2" outlined>
                                 <v-list-item three-line>
@@ -51,7 +51,7 @@
                             </v-card>
                         </v-hover>
                     </v-col>
-                    <v-col>
+                    <v-col class="fade-enter-active-2">
                         <v-hover v-slot:default="{ hover }">
                             <v-card style="float: left" class="mx-auto" max-width="500" :elevation="hover ? 16 : 2" outlined>
                                 <v-list-item three-line>
@@ -72,7 +72,7 @@
                 </v-row>
 
                 <v-row id="galley_btm">
-                    <v-col>
+                    <v-col class="fade-enter-active-3">
                         <v-hover v-slot:default="{ hover }">
                             <v-card style="float: right" class="mx-auto" max-width="500" :elevation="hover ? 16 : 2" outlined>
                                 <v-list-item three-line>
@@ -90,7 +90,7 @@
                             </v-card>
                         </v-hover>
                     </v-col>
-                    <v-col>
+                    <v-col class="fade-enter-active-4">
                         <v-hover v-slot:default="{ hover }">
                             <v-card style="float: left" class="mx-auto" max-width="500" :elevation="hover ? 16 : 2" outlined>
                                 <v-list-item three-line>
