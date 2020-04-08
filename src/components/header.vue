@@ -14,19 +14,19 @@
                 <v-img src="../resources/images/staynmore_glow.png"></v-img>
                 <v-col style="text-align: center;" >
                     <v-divider color="#dddddd" style="box-shadow: 0px 0px 1px #dddddd;"></v-divider>
-                    <router-link to="/"><v-btn style="font-size: 13px" min-width="100%" x-large color="#dddddd" text dark><h1>처음으로</h1></v-btn></router-link>
+                    <router-link to="/"><v-btn style="font-size: 13px; font-family: 'Nanum Gothic'" min-width="100%" x-large color="#dddddd" text dark><h1>처음으로</h1></v-btn></router-link>
                     <v-divider color="#dddddd" style="box-shadow: 0px 0px 1px #dddddd;"></v-divider>
-                    <v-btn style="font-size: 13px" min-width="100%" x-large color="#dddddd" text dark><h1>예약확인</h1></v-btn>
+                    <v-btn style="font-size: 13px; font-family: 'Nanum Gothic'" min-width="100%" x-large color="#dddddd" text dark><h1>예약확인</h1></v-btn>
                     <v-divider color="#dddddd" style="box-shadow: 0px 0px 1px #dddddd;"></v-divider>
-                    <v-btn style="font-size: 13px" min-width="100%" x-large color="#dddddd" text dark><h1>온라인문의</h1></v-btn>
+                    <v-btn style="font-size: 13px; font-family: 'Nanum Gothic'" min-width="100%" x-large color="#dddddd" text dark><h1>온라인문의</h1></v-btn>
                     <v-divider color="#dddddd" style="box-shadow: 0px 0px 1px #dddddd;"></v-divider>
-                    <v-btn style="font-size: 13px" min-width="100%" x-large color="#dddddd" text dark><h1>기업/단체문의</h1></v-btn>
+                    <v-btn style="font-size: 13px; font-family: 'Nanum Gothic'" min-width="100%" x-large color="#dddddd" text dark><h1>기업/단체문의</h1></v-btn>
                     <v-divider color="#dddddd" style="box-shadow: 0px 0px 1px #dddddd;"></v-divider>
-                    <v-btn style="font-size: 13px" min-width="100%" x-large color="#dddddd" text dark><h1>신용카드 무이자할부</h1></v-btn>
+                    <v-btn style="font-size: 13px; font-family: 'Nanum Gothic'" min-width="100%" x-large color="#dddddd" text dark><h1>신용카드 무이자할부</h1></v-btn>
                     <v-divider color="#dddddd" style="box-shadow: 0px 0px 1px #dddddd;"></v-divider>
-                    <v-btn style="font-size: 13px" min-width="100%" x-large color="#dddddd" text dark><h1>프로모션</h1></v-btn>
+                    <v-btn style="font-size: 13px; font-family: 'Nanum Gothic'" min-width="100%" x-large color="#dddddd" text dark><h1>프로모션</h1></v-btn>
                     <v-divider color="#dddddd" style="box-shadow: 0px 0px 1px #dddddd;"></v-divider>
-                    <v-btn style="font-size: 13px" min-width="100%" x-large color="#dddddd" text dark><h1>다른호텔보기</h1></v-btn>
+                    <v-btn style="font-size: 13px; font-family: 'Nanum Gothic'" min-width="100%" x-large color="#dddddd" text dark><h1>다른호텔보기</h1></v-btn>
                     <v-divider color="#dddddd" style="box-shadow: 0px 0px 1px #dddddd;"></v-divider>
                 </v-col>
 <!--            <v-img src="../resources/images/staynmore.png"></v-img>-->
