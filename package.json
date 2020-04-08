@@ -16,6 +16,10 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "latest",
+    "@fortawesome/free-regular-svg-icons": "^5.13.0",
+    "@fortawesome/free-solid-svg-icons": "latest",
+    "@fortawesome/vue-fontawesome": "latest",
     "core-js": "^3.6.4",
     "date-fns": "^2.11.1",
     "vue": "^2.6.11",

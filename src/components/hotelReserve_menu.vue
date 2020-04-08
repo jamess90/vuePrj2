@@ -1,5 +1,5 @@
 <template>
-    <v-row class="bounce-enter-active-1" style="text-align: center; margin-left: 100px;">
+    <v-row class="bounce-enter-active-1" style="text-align: center; margin-left: 50px;">
         <router-link :to="homeLink + this.$store.state.hotelNum">
             <v-btn style="font-size: 16px" x-large text dark>HOTEL HOME</v-btn>
         </router-link><span style="width:10px"></span>
