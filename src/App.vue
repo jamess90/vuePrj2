@@ -1,6 +1,6 @@
 <template>
     <v-app id="sandbox">
-        <header-component :icon="FontAwesomeIcon"></header-component>
+        <header-component></header-component>
 
         <v-content>
             <router-view></router-view>
@@ -14,7 +14,6 @@
 
     import footer from './components/footer'
     import header from './components/header'
-    import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
     import animation from './resources/css/animation.css'
 
     export default {
@@ -24,7 +23,6 @@
             'header-component': header
         },
         data: () => ({
-            FontAwesomeIcon,
             drawers: ['Default (no property)', 'Permanent', 'Temporary'],
             primaryDrawer: {
                 model: null,

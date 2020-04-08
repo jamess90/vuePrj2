@@ -47,7 +47,7 @@
 <!--                </v-col>-->
         </v-navigation-drawer>
 
-        <v-app-bar :clipped-left="primaryDrawer.clipped" app color="#002542a6" dark><!--2a3a3ec2-->
+        <v-app-bar :clipped-left="primaryDrawer.clipped" app color="rgba(10,50,80,0.9)" dark><!--#002542a6-->
             <v-app-bar-nav-icon v-if="primaryDrawer.type !== 'permanent'" v-show="this.$store.state.pageName!=='home'"
                                 @click.stop="primaryDrawer.model = !primaryDrawer.model"/>
 

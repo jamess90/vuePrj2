@@ -20,102 +20,102 @@
             </v-row>
         </v-parallax>
         <v-content
-                   style="background-color: #ffffff; overflow: hidden; min-height: 1000px; max-width: 1300px; margin: 0 auto; padding: 5% 0; margin-top: -80px;">
-            <div style="max-width: 1200px; overflow: hidden; margin: 0 auto; padding: 5% 0;">
-                <template>
-                    <v-container fluid id="reserve" class="fade-enter-active-4">
-                        <v-data-iterator :items="items" :items-per-page.sync="itemsPerPage" :page="page"
-                                         :search="search" :sort-by="sortBy.toLowerCase()" :sort-desc="sortDesc"
-                                         hide-default-footer dark>
-                            <template v-slot:header>
-                                <v-toolbar class="mb-1" color="#597081">
-                                    <v-select :items="destinationList" clearable flat hide-details
-                                              label="Destination"></v-select>
-                                    <v-spacer></v-spacer>
-                                    <v-select :items="hotelResort" clearable flat hide-details
-                                              label="Hotel/Resort"></v-select>
-                                    <v-spacer></v-spacer>
-                                    <v-text-field v-model="search" clearable flat hide-details
-                                                  label="Search"></v-text-field>
+            style="background-color: #ffffff; overflow: hidden; min-height: 1000px; max-width: 1300px; margin: 0 auto; padding: 5% 0; margin-top: -80px;">
+        <div style="max-width: 1200px; overflow: hidden; margin: 0 auto; padding: 5% 0;">
+            <template>
+                <v-container fluid id="reserve" class="fade-enter-active-4">
+                    <v-data-iterator :items="items" :items-per-page.sync="itemsPerPage" :page="page"
+                                     :search="search" :sort-by="sortBy.toLowerCase()" :sort-desc="sortDesc"
+                                     hide-default-footer dark>
+                        <template v-slot:header>
+                            <v-toolbar class="mb-1" color="rgba(10,50,80,0.9)">
+                                <v-select :items="destinationList" clearable flat hide-details
+                                          label="Destination"></v-select>
+                                <v-spacer></v-spacer>
+                                <v-select :items="hotelResort" clearable flat hide-details
+                                          label="Hotel/Resort"></v-select>
+                                <v-spacer></v-spacer>
+                                <v-text-field v-model="search" clearable flat hide-details
+                                              label="Search"></v-text-field>
 
-                                    <template v-if="$vuetify.breakpoint.mdAndUp">
-                                        <v-spacer></v-spacer>
-                                        <v-spacer></v-spacer>
-                                        <v-btn-toggle v-model="sortDesc" mandatory>
-                                            <v-btn large depressed :value="false" color="#7EA0B7">
-                                                <v-icon>mdi-arrow-up</v-icon>
-                                            </v-btn>
-                                            <v-btn large depressed :value="true" color="#7EA0B7">
-                                                <v-icon>mdi-arrow-down</v-icon>
-                                            </v-btn>
-                                        </v-btn-toggle>
-                                    </template>
-                                </v-toolbar>
-                            </template>
-                            <template v-slot:default="props">
-                                <v-row>
-                                    <v-col v-for="item in props.items" :key="item.name" cols="12" sm="6" md="4" lg="3">
-                                        <v-divider></v-divider>
-                                        <v-hover v-slot:default="{ hover }">
-                                            <v-card color="grey lighten-4" :elevation="hover ? 16 : 2"
-                                                    max-width="600">
-                                                <v-img :aspect-ratio="16/9" :src="dummy" width="100%" height="240"
-                                                       v-on:click="goRoomDetail(item.id)"
-                                                       style="filter: brightness(90%)">
+                                <template v-if="$vuetify.breakpoint.mdAndUp">
+                                    <v-spacer></v-spacer>
+                                    <v-spacer></v-spacer>
+                                    <v-btn-toggle v-model="sortDesc" mandatory>
+                                        <v-btn large depressed :value="false" color="#7EA0B7">
+                                            <v-icon>mdi-arrow-up</v-icon>
+                                        </v-btn>
+                                        <v-btn large depressed :value="true" color="#7EA0B7">
+                                            <v-icon>mdi-arrow-down</v-icon>
+                                        </v-btn>
+                                    </v-btn-toggle>
+                                </template>
+                            </v-toolbar>
+                        </template>
+                        <template v-slot:default="props">
+                            <v-row>
+                                <v-col v-for="item in props.items" :key="item.name" cols="12" sm="6" md="4" lg="3">
+                                    <v-divider></v-divider>
+                                    <v-hover v-slot:default="{ hover }">
+                                        <v-card color="grey lighten-4" :elevation="hover ? 16 : 2"
+                                                max-width="600">
+                                            <v-img :aspect-ratio="16/9" :src="dummy" width="100%" height="240"
+                                                   v-on:click="goRoomDetail(item.id)"
+                                                   style="filter: brightness(90%)">
                                                     <span style="position: relative; bottom:0px;">
                                                         <h3 float="left"
                                                             style="color:white; text-align: left; margin: 10px 10px 10px 10px;">{{item.region}}</h3>
                                                         <h5 float="left"
                                                             style="color:white; text-align: left; margin: 10px 10px 10px 10px;">{{item.name}}</h5>
                                                     </span>
-                                                    <v-expand-transition>
-                                                        <div v-if="hover" class="d-flex darken-2 v-card--reveal white--text">
+                                                <v-expand-transition>
+                                                    <div v-if="hover" class="d-flex darken-2 v-card--reveal white--text">
                                                             <span style="position: relative; bottom:0px;">
                                                                 <h3 style="color:white; margin: 10px 10px 10px 10px;">상세정보보러가기</h3><br>
                                                                 <br>
                                                             </span>
-                                                        </div>
-                                                    </v-expand-transition>
-                                                </v-img>
-                                            </v-card>
-                                        </v-hover>
-                                        <v-divider></v-divider>
-                                    </v-col>
-                                </v-row>
-                            </template>
-                            <template v-slot:footer>
-                                <v-row class="mt-2" align="center" style="width: 99.5%; margin-left:2px;">
-                                    <span class="grey--text">Items per page</span>
-                                    <v-menu offset-y>
-                                        <template v-slot:activator="{ on }">
-                                            <v-btn text color="#597081" class="ml-2" v-on="on">
-                                                {{ itemsPerPage }}
-                                                <v-icon>mdi-chevron-down</v-icon>
-                                            </v-btn>
-                                        </template>
-                                        <v-list color="#white">
-                                            <v-list-item v-for="(number, index) in itemsPerPageArray"
-                                                         :key="index"
-                                                         @click="updateItemsPerPage(number)">
-                                                <v-list-item-title>{{ number }}</v-list-item-title>
-                                            </v-list-item>
-                                        </v-list>
-                                    </v-menu>
-                                    <v-spacer></v-spacer>
-                                    <span class="mr-4" color="#597081"> Page {{ page }} of {{ numberOfPages }} </span>
-                                    <v-btn fab color="#597081" class="mr-1" @click="formerPage">
-                                        <v-icon>mdi-chevron-left</v-icon>
-                                    </v-btn>
-                                    <v-btn fab color="#597081" class="ml-1" @click="nextPage">
-                                        <v-icon>mdi-chevron-right</v-icon>
-                                    </v-btn>
-                                </v-row>
-                            </template>
-                        </v-data-iterator>
-                    </v-container>
-                </template>
-            </div>
-        </v-content>
+                                                    </div>
+                                                </v-expand-transition>
+                                            </v-img>
+                                        </v-card>
+                                    </v-hover>
+                                    <v-divider></v-divider>
+                                </v-col>
+                            </v-row>
+                        </template>
+                        <template v-slot:footer>
+                            <v-row class="mt-2" align="center" style="width: 99.5%; margin-left:2px;">
+                                <span class="grey--text">Items per page</span>
+                                <v-menu offset-y>
+                                    <template v-slot:activator="{ on }">
+                                        <v-btn text color="#597081" class="ml-2" v-on="on">
+                                            {{ itemsPerPage }}
+                                            <v-icon>mdi-chevron-down</v-icon>
+                                        </v-btn>
+                                    </template>
+                                    <v-list color="#white">
+                                        <v-list-item v-for="(number, index) in itemsPerPageArray"
+                                                     :key="index"
+                                                     @click="updateItemsPerPage(number)">
+                                            <v-list-item-title>{{ number }}</v-list-item-title>
+                                        </v-list-item>
+                                    </v-list>
+                                </v-menu>
+                                <v-spacer></v-spacer>
+                                <span class="mr-4" color="#597081"> Page {{ page }} of {{ numberOfPages }} </span>
+                                <v-btn fab color="#597081" class="mr-1" @click="formerPage">
+                                    <v-icon>mdi-chevron-left</v-icon>
+                                </v-btn>
+                                <v-btn fab color="#597081" class="ml-1" @click="nextPage">
+                                    <v-icon>mdi-chevron-right</v-icon>
+                                </v-btn>
+                            </v-row>
+                        </template>
+                    </v-data-iterator>
+                </v-container>
+            </template>
+        </div>
+    </v-content>
     </section>
 </template>
 
